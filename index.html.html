@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>강점 퍼포먼스 코치 Star | 우근영</title>
+<meta name="description" content="강점 퍼포먼스 코치 Star 우근영. 강점코칭과 심리 기반 접근으로 자기 정체성과 고성과의 방향을 설계합니다." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+KR:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ========================= TOKENS ========================= */
+:root {
+  --black:   #0E0E0E;
+  --yellow:  #F5C800;
+  --red:     #E02020;
+  --white:   #FFFFFF;
+  --cream:   #F8F5EE;
+  --cream2:  #F0EBE0;
+  --text:    #1A1A1A;
+  --muted:   #6B6760;
+  --line:    rgba(14,14,14,0.10);
+  --shadow:  0 18px 50px rgba(14,14,14,0.10);
+  --r-lg:    28px;
+  --r-md:    18px;
+  --r-pill:  999px;
+  --max-w:   1160px;
+  --py:      88px;
+}
+
+/* ========================= RESET ========================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ========================= LAYOUT ========================= */
+.wrap {
+  width: min(var(--max-w), calc(100% - 48px));
+  margin: 0 auto;
+}
+.sec { padding: var(--py) 0; }
+.sec--dark { background: var(--black); color: var(--white); }
+.sec--white { background: var(--white); }
+.sec--yellow { background: var(--yellow); }
+.sec--cream2 { background: var(--cream2); }
+
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+.grid-5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; }
+
+.sec-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
+.sec-head--left { text-align: left; margin-left: 0; }
+
+/* ========================= TYPE ========================= */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: var(--r-pill);
+  background: rgba(245,200,0,0.15); color: #8a6e00;
+  font-weight: 700; font-size: 13px; margin-bottom: 20px;
+  font-family: 'DM Mono', monospace; letter-spacing: 0.5px;
+}
+.sec--dark .eyebrow { background: rgba(245,200,0,0.18); color: var(--yellow); }
+
+.h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(38px, 5.5vw, 68px);
+  line-height: 1.08; letter-spacing: -0.04em;
+  color: var(--black); margin-bottom: 24px; font-weight: 700;
+}
+.h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(28px, 3.8vw, 48px);
+  line-height: 1.18; letter-spacing: -0.04em;
+  color: var(--black); margin-bottom: 14px; font-weight: 700;
+}
+.h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 20px; letter-spacing: -0.03em;
+  color: var(--black); margin-bottom: 12px; font-weight: 700;
+}
+.sub { color: var(--muted); font-size: 17px; letter-spacing: -0.01em; }
+
+.sec--dark .h2, .sec--dark .h3 { color: var(--white); }
+.sec--dark .sub { color: rgba(255,255,255,0.65); }
+.sec--yellow .h2, .sec--yellow .h3 { color: var(--black); }
+
+/* ========================= BUTTONS ========================= */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 24px; border-radius: var(--r-pill);
+  font-weight: 700; font-size: 15px; cursor: pointer; border: 2px solid transparent;
+  transition: transform .2s, box-shadow .2s, background .2s;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--primary {
+  background: var(--black); color: var(--white);
+  box-shadow: 0 12px 28px rgba(14,14,14,0.18);
+}
+.btn--primary:hover { background: #1a1a1a; box-shadow: 0 18px 36px rgba(14,14,14,0.22); }
+.btn--yellow {
+  background: var(--yellow); color: var(--black);
+  box-shadow: 0 12px 28px rgba(245,200,0,0.35);
+}
+.btn--yellow:hover { background: #ffd700; box-shadow: 0 18px 36px rgba(245,200,0,0.45); }
+.btn--outline {
+  background: transparent; color: var(--black); border-color: rgba(14,14,14,0.25);
+}
+.btn--outline:hover { border-color: var(--black); }
+.btn--outline-light {
+  background: transparent; color: var(--white); border-color: rgba(255,255,255,0.35);
+}
+.btn--outline-light:hover { border-color: rgba(255,255,255,0.75); }
+.btn-group { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.btn-group--center { justify-content: center; }
+
+/* ========================= NAV ========================= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(14,14,14,0.96); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(245,200,0,0.12);
+  height: 58px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+}
+.nav-logo {
+  font-family: 'DM Mono', monospace; font-size: 0.8rem;
+  color: var(--yellow); letter-spacing: 1.5px;
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 1px;
+  color: rgba(255,255,255,0.6); transition: color .2s;
+}
+.nav-links a:hover { color: var(--yellow); }
+.nav-cta {
+  font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 1px;
+  background: var(--yellow); color: var(--black); padding: 0.45rem 1.2rem;
+  border-radius: var(--r-pill); font-weight: 700; transition: background .2s;
+}
+.nav-cta:hover { background: #ffd700; }
+
+/* ========================= HERO ========================= */
+.s-hero {
+  background: var(--cream); padding-top: calc(58px + 80px); padding-bottom: 80px;
+}
+.s-hero__grid {
+  display: grid; grid-template-columns: 1fr 420px;
+  gap: 56px; align-items: center;
+}
+.s-hero__copy {
+  font-size: 17px; color: var(--muted); margin-bottom: 32px;
+  max-width: 520px; line-height: 1.75;
+}
+.s-hero__trust {
+  margin-top: 28px;
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px;
+  color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+}
+.s-hero__trust::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--muted); }
+
+.s-hero__photo-card {
+  background: var(--black); border-radius: var(--r-lg);
+  overflow: hidden; position: relative;
+  box-shadow: 0 32px 80px rgba(14,14,14,0.18);
+}
+.s-hero__photo {
+  width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top;
+  display: block; filter: grayscale(8%);
+}
+.s-hero__photo-placeholder {
+  width: 100%; aspect-ratio: 3/4;
+  background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.s-hero__badge-strip {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(14,14,14,0.88); backdrop-filter: blur(8px);
+  padding: 14px 18px; display: flex; gap: 10px; justify-content: center;
+}
+.s-hero__badge {
+  font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 1px;
+  color: var(--yellow); text-align: center; line-height: 1.4;
+  padding: 6px 10px; border: 1px solid rgba(245,200,0,0.3);
+  border-radius: 6px;
+}
+
+/* ========================= METRIC CARDS ========================= */
+.s-metrics { padding: 0 0 72px; }
+.c-metric {
+  background: var(--white); border-radius: var(--r-md);
+  padding: 28px 20px; text-align: center;
+  box-shadow: var(--shadow); border: 1px solid var(--line);
+}
+.c-metric__val {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem;
+  color: var(--black); letter-spacing: 1px; line-height: 1;
+}
+.c-metric__val span { color: var(--yellow); }
+.c-metric__label {
+  font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.4;
+}
+
+/* ========================= PROBLEM CARDS ========================= */
+.c-card {
+  background: var(--white); border-radius: var(--r-lg);
+  padding: 32px 28px; box-shadow: var(--shadow); border: 1px solid var(--line);
+  transition: transform .25s, box-shadow .25s;
+}
+.c-card:hover { transform: translateY(-4px); box-shadow: 0 28px 64px rgba(14,14,14,0.14); }
+.c-card__num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem;
+  color: rgba(14,14,14,0.06); letter-spacing: 1px; line-height: 1; margin-bottom: 12px;
+}
+.sec--dark .c-card { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.08); }
+.sec--dark .c-card:hover { background: rgba(255,255,255,0.08); }
+.sec--dark .c-card .c-card__num { color: rgba(255,255,255,0.06); }
+.c-card ul { list-style: none; }
+.c-card ul li {
+  font-size: 14px; color: var(--muted); padding: 7px 0;
+  border-bottom: 1px solid var(--line); display: flex; gap: 8px; align-items: flex-start;
+}
+.c-card ul li::before { content: '—'; color: var(--yellow); flex-shrink: 0; }
+.c-card ul li:last-child { border-bottom: none; }
+.sec--dark .c-card ul li { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.08); }
+
+/* ========================= STEP CARDS ========================= */
+.c-step {
+  background: var(--white); border-radius: var(--r-lg);
+  padding: 32px 24px; box-shadow: var(--shadow); border: 1px solid var(--line);
+  position: relative; overflow: hidden;
+}
+.c-step::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--yellow);
+}
+.c-step__num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem;
+  color: rgba(14,14,14,0.06); line-height: 1; margin-bottom: 8px;
+}
+.c-step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+/* ========================= PROGRAM CARDS ========================= */
+.c-program {
+  background: var(--white); border-radius: var(--r-lg);
+  padding: 32px 28px; box-shadow: var(--shadow); border: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 12px;
+  transition: transform .25s;
+}
+.c-program:hover { transform: translateY(-4px); }
+.c-tag {
+  display: inline-block; font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 1.5px; padding: 4px 10px;
+  background: rgba(245,200,0,0.15); color: #7a6600;
+  border-radius: var(--r-pill); width: fit-content;
+}
+.c-program p { font-size: 14px; color: var(--muted); line-height: 1.75; flex: 1; }
+.c-link { font-size: 13px; font-weight: 700; color: var(--black); display: flex; align-items: center; gap: 4px; margin-top: 4px; }
+.c-link:hover { color: var(--red); }
+
+/* ========================= ABOUT SECTION ========================= */
+.s-about { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.c-check-list { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.c-check-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 15px; color: var(--text);
+}
+.c-check-icon {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--yellow); color: var(--black);
+  font-size: 11px; font-weight: 900; display: flex;
+  align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+.s-about__quote {
+  background: var(--black); border-radius: var(--r-lg);
+  padding: 2.5rem; position: relative; overflow: hidden;
+}
+.s-about__quote::before {
+  content: '★'; position: absolute; top: -20px; right: 24px;
+  font-size: 7rem; color: rgba(245,200,0,0.06);
+}
+.s-about__quote blockquote {
+  font-family: 'Noto Serif KR', serif; font-size: 1.05rem;
+  line-height: 1.9; color: rgba(255,255,255,0.85); font-style: italic; margin-bottom: 0.75rem;
+}
+.s-about__quote cite {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  letter-spacing: 1.5px; color: rgba(255,255,255,0.4); font-style: normal;
+}
+.s-about__quote-bottom {
+  margin-top: 1rem; padding-top: 1rem;
+  border-top: 1px solid rgba(245,200,0,0.2);
+  font-size: 0.9rem; color: var(--yellow); line-height: 1.7;
+  font-family: 'Noto Serif KR', serif;
+}
+.s-about__ai {
+  background: rgba(245,200,0,0.08); border: 1px solid rgba(245,200,0,0.2);
+  border-radius: var(--r-md); padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;
+}
+.s-about__ai-label {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
+  color: var(--black); line-height: 1; flex-shrink: 0;
+}
+.s-about__ai-text strong {
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  letter-spacing: 2px; color: #7a6600; display: block; margin-bottom: 4px;
+}
+.s-about__ai-text p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ========================= TESTIMONIALS ========================= */
+.c-testi {
+  background: var(--white); border-radius: var(--r-lg);
+  padding: 28px 24px; box-shadow: var(--shadow); border: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.c-testi__quote {
+  font-family: 'Noto Serif KR', serif; font-size: 14px;
+  color: var(--text); line-height: 1.8; font-style: italic;
+  border-left: 3px solid var(--yellow); padding-left: 14px; flex: 1;
+}
+.c-testi__source {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 1px; color: var(--muted);
+}
+
+/* ========================= CREDENTIALS ========================= */
+.c-cred {
+  background: var(--white); border-radius: var(--r-md);
+  padding: 20px 22px; border: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(14,14,14,0.06);
+  transition: transform .2s;
+}
+.c-cred:hover { transform: translateY(-2px); }
+.c-cred--highlight { border-left: 3px solid var(--yellow); }
+.c-cred__title { font-size: 14px; font-weight: 700; color: var(--black); margin-bottom: 4px; line-height: 1.4; }
+.c-cred__meta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.5px; color: var(--muted); }
+
+/* ========================= BOOK ========================= */
+.s-book { display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start; }
+.s-book__img {
+  border-radius: 8px; overflow: hidden;
+  box-shadow: 12px 12px 0 var(--yellow);
+}
+.s-book__img img { width: 100%; display: block; }
+.s-book__meta { display: flex; flex-direction: column; gap: 8px; margin: 20px 0; }
+.s-book__row { display: flex; gap: 16px; font-size: 14px; }
+.s-book__key { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--yellow); min-width: 52px; margin-top: 2px; }
+.s-book__val { color: rgba(255,255,255,0.7); }
+.s-book__desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.85; margin-top: 8px; }
+
+/* ========================= FINAL CTA ========================= */
+.s-cta {
+  background: var(--black); padding: var(--py) 0;
+  text-align: center;
+}
+.s-cta .h2 { color: var(--white); }
+.s-cta__text { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto 36px; line-height: 1.8; }
+
+/* ========================= FOOTER ========================= */
+.l-footer {
+  background: #070707; border-top: 1px solid rgba(245,200,0,0.1);
+  padding: 2.5rem 5%;
+}
+.l-footer__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.5px;
+}
+.l-footer__logo { color: var(--yellow); font-size: 12px; }
+.l-footer__links { color: rgba(255,255,255,0.35); }
+.l-footer__links a { color: rgba(255,255,255,0.45); transition: color .2s; }
+.l-footer__links a:hover { color: var(--yellow); }
+.l-footer__copy { color: rgba(255,255,255,0.2); }
+
+/* ========================= ANIMATIONS ========================= */
+.fade { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+.fade.on { opacity: 1; transform: none; }
+
+/* ========================= RESPONSIVE ========================= */
+@media (max-width: 960px) {
+  .s-hero__grid { grid-template-columns: 1fr; }
+  .s-hero__photo-card { max-width: 380px; margin: 0 auto; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2,1fr); }
+  .grid-5 { grid-template-columns: repeat(2,1fr); }
+  .s-about { grid-template-columns: 1fr; gap: 2rem; }
+  .s-book { grid-template-columns: 1fr; }
+  .s-book__img { max-width: 240px; }
+  .l-footer__inner { flex-direction: column; gap: 10px; text-align: center; }
+  .nav-links { display: none; }
+}
+@media (max-width: 640px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .grid-5 { grid-template-columns: 1fr; }
+}
+
+/* ========================= MODAL ========================= */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(14,14,14,0.72); backdrop-filter: blur(6px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: var(--white); border-radius: var(--r-lg);
+  width: 100%; max-width: 540px; max-height: 92vh; overflow-y: auto;
+  box-shadow: 0 32px 80px rgba(14,14,14,0.30);
+  animation: modalIn .26s ease; position: relative;
+}
+@keyframes modalIn {
+  from { opacity:0; transform: translateY(18px) scale(0.97); }
+  to   { opacity:1; transform: none; }
+}
+
+.modal__head {
+  background: var(--black); border-radius: var(--r-lg) var(--r-lg) 0 0;
+  padding: 28px 32px 22px; position: relative;
+}
+.modal__close {
+  position: absolute; top: 18px; right: 22px;
+  background: rgba(255,255,255,0.09); border: none; cursor: pointer;
+  width: 32px; height: 32px; border-radius: 50%; color: rgba(255,255,255,0.65);
+  font-size: 18px; display: flex; align-items: center; justify-content: center;
+  transition: background .2s; line-height: 1;
+}
+.modal__close:hover { background: rgba(255,255,255,0.18); color: var(--white); }
+.modal__eyebrow {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 2px; color: var(--yellow); margin-bottom: 8px;
+}
+.modal__title {
+  font-family: 'Noto Serif KR', serif; font-size: 1.25rem;
+  font-weight: 700; color: var(--white); line-height: 1.35; margin-bottom: 6px;
+}
+.modal__sub { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+.modal__body { padding: 26px 32px 32px; }
+
+.m-group { margin-bottom: 16px; }
+.m-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+@media (max-width: 480px) { .m-row { grid-template-columns: 1fr; } }
+
+.m-label {
+  display: block; font-size: 12px; font-weight: 700;
+  color: var(--text); margin-bottom: 6px;
+}
+.m-label span { color: var(--red); }
+
+.m-input {
+  width: 100%; border: 1.5px solid rgba(14,14,14,0.14);
+  border-radius: 10px; padding: 11px 14px;
+  font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+  color: var(--text); background: var(--cream); outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.m-input:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(245,200,0,0.15);
+}
+.m-input::placeholder { color: rgba(14,14,14,0.28); }
+textarea.m-input { resize: vertical; min-height: 106px; line-height: 1.65; }
+select.m-input {
+  cursor: pointer; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6760' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.m-submit {
+  width: 100%; padding: 14px 0;
+  background: var(--black); color: var(--white);
+  border: none; border-radius: var(--r-pill);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  transition: background .2s, transform .18s; margin-top: 6px;
+}
+.m-submit:hover { background: #222; transform: translateY(-1px); }
+.m-submit:disabled { background: var(--muted); cursor: not-allowed; transform: none; }
+
+.m-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 22px 0; color: var(--muted); font-size: 12px;
+}
+.m-divider::before, .m-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--line);
+}
+
+.m-alt-channels { display: flex; gap: 10px; }
+.m-channel {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px 10px; border: 1.5px solid var(--line); border-radius: 10px;
+  font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.m-channel:hover { border-color: var(--yellow); background: rgba(245,200,0,0.06); }
+.m-channel svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.m-privacy {
+  font-size: 11px; color: var(--muted); text-align: center;
+  margin-top: 14px; line-height: 1.6;
+}
+
+.m-success { display: none; text-align: center; padding: 24px 0 8px; }
+.m-success__icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--yellow); color: var(--black); font-size: 22px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+}
+.m-success__title {
+  font-family: 'Noto Serif KR', serif; font-size: 1.15rem;
+  font-weight: 700; color: var(--black); margin-bottom: 8px;
+}
+.m-success__text { font-size: 14px; color: var(--muted); line-height: 1.75; }
+</style>
+</head>
+<body>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal__head">
+      <button class="modal__close" onclick="closeModal()" aria-label="닫기">&#x2715;</button>
+      <p class="modal__eyebrow">CONTACT · 강점 퍼포먼스 코치 Star</p>
+      <h2 class="modal__title" id="modalTitle">코칭 및 강의 문의</h2>
+      <p class="modal__sub">보내주신 내용은 337smile@gmail.com으로 전달됩니다.<br>보통 1–2일 내 회신드립니다.</p>
+    </div>
+    <div class="modal__body">
+      <form id="contactForm"
+            action="https://formspree.io/f/mvzybjop"
+            method="POST"
+            onsubmit="handleSubmit(event)">
+        <div class="m-row">
+          <div>
+            <label class="m-label" for="m-name">이름 <span>*</span></label>
+            <input class="m-input" id="m-name" name="name" type="text" placeholder="성함을 입력해주세요" required>
+          </div>
+          <div>
+            <label class="m-label" for="m-contact">연락처 <span>*</span></label>
+            <input class="m-input" id="m-contact" name="contact" type="text" placeholder="이메일 또는 전화번호" required>
+          </div>
+        </div>
+        <div class="m-group">
+          <label class="m-label" for="m-type">문의 유형</label>
+          <select class="m-input" id="m-type" name="type">
+            <option value="">문의 유형을 선택해주세요</option>
+            <option>1:1 강점코칭</option>
+            <option>커리어 전환 설계</option>
+            <option>관계·자기이해 코칭</option>
+            <option>리더십 코칭</option>
+            <option>LSP 퍼실리테이션·워크숍</option>
+            <option>AI 활용 강의·코칭</option>
+            <option>조직 강의·워크숍</option>
+            <option>기타</option>
+          </select>
+        </div>
+        <div class="m-group">
+          <label class="m-label" for="m-msg">문의 내용 <span>*</span></label>
+          <textarea class="m-input" id="m-msg" name="message" placeholder="고민하시는 내용을 자유롭게 적어주세요." required></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="[코치Star] 코칭·강의 문의">
+        <button class="m-submit" type="submit" id="m-submit-btn">문의 보내기 →</button>
+      </form>
+      <div class="m-success" id="m-success">
+        <div class="m-success__icon">&#x2713;</div>
+        <p class="m-success__title">문의가 접수되었습니다</p>
+        <p class="m-success__text">빠른 시일 내에 회신드리겠습니다.<br>보통 1–2일 내 연락드립니다.</p>
+      </div>
+      <div class="m-divider">또는 직접 연락</div>
+      <div class="m-alt-channels">
+        <a class="m-channel" href="mailto:337smile@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          이메일
+        </a>
+        <a class="m-channel" href="https://www.instagram.com/337star" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          인스타그램 DM
+        </a>
+      </div>
+      <p class="m-privacy">제출하신 정보는 코칭 문의 회신 목적으로만 사용됩니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-logo">강점 퍼포먼스 코치 Star</span>
+  <ul class="nav-links">
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#program">프로그램</a></li>
+    <li><a href="#credentials">자격</a></li>
+    <li><a href="#contact">문의</a></li>
+  </ul>
+  <button onclick="openModal()" class="nav-cta">문의하기 →</button>
+</nav>
+
+<!-- HERO -->
+<section class="s-hero">
+  <div class="wrap s-hero__grid">
+    <div class="fade">
+      <div class="eyebrow">Gallup Certified · KPC Coach · LSP Facilitator · AI Agent</div>
+      <h1 class="h1">강점으로<br>사람과 조직의<br>성장을 설계합니다</h1>
+      <p class="s-hero__copy">
+        개인·조직·가족의 성장을 연결합니다. 강점코칭과 심리 기반 접근으로 자기 정체성을 발견하고, 고성과가 지속되는 삶과 일을 설계합니다.
+      </p>
+      <div class="btn-group">
+        <button onclick="openModal()" class="btn btn--primary">1:1 코칭 문의하기</button>
+        <a href="#program" class="btn btn--outline">강의·워크숍 보기</a>
+      </div>
+      <div class="s-hero__trust">
+        강점코칭 250시간+ · 조직 리더 25년+ · 공저 《위대한 나의 발견》
+      </div>
+    </div>
+
+    <div class="s-hero__photo-card fade">
+      <img class="s-hero__photo" src="프로필_코치_근영_정면.png" alt="강점 퍼포먼스 코치 Star 우근영"
+           onerror="this.outerHTML='<div class=\'s-hero__photo-placeholder\'><span style=\'font-family:Bebas Neue,sans-serif;font-size:3rem;color:rgba(245,200,0,0.2);letter-spacing:4px;\'>COACH STAR</span></div>'">
+      <div class="s-hero__badge-strip">
+        <div class="s-hero__badge">Gallup<br>Certified</div>
+        <div class="s-hero__badge">KPC<br>Coach</div>
+        <div class="s-hero__badge">LSP<br>Facilitator</div>
+        <div class="s-hero__badge">AI<br>Agent</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="s-metrics">
+  <div class="wrap grid-5">
+    <div class="c-metric fade">
+      <div class="c-metric__val">250<span>+</span></div>
+      <div class="c-metric__label">강점코칭 및 코칭 시간</div>
+    </div>
+    <div class="c-metric fade">
+      <div class="c-metric__val">25<span>+</span></div>
+      <div class="c-metric__label">조직 리더 경험</div>
+    </div>
+    <div class="c-metric fade">
+      <div class="c-metric__val">14<span>+</span></div>
+      <div class="c-metric__label">심리·코칭 전문 자격</div>
+    </div>
+    <div class="c-metric fade">
+      <div class="c-metric__val">다수</div>
+      <div class="c-metric__label">강의 및 워크숍 진행</div>
+    </div>
+    <div class="c-metric fade">
+      <div class="c-metric__val">공저</div>
+      <div class="c-metric__label">《위대한 나의 발견》</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sec sec--white">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <h2 class="h2">이런 고민이 있으신가요?</h2>
+      <p class="sub">더 많은 노력보다 먼저 필요한 것은 나를 이해하는 정확한 기준입니다.</p>
+    </div>
+    <div class="grid-3">
+      <div class="c-card fade">
+        <div class="c-card__num">01</div>
+        <h3 class="h3">개인</h3>
+        <ul>
+          <li>열심히 사는데 방향이 흔들립니다</li>
+          <li>강점을 알아도 적용이 어렵습니다</li>
+          <li>커리어 전환이 두렵습니다</li>
+          <li>AI 시대, 나의 경쟁력이 막막합니다</li>
+        </ul>
+      </div>
+      <div class="c-card fade">
+        <div class="c-card__num">02</div>
+        <h3 class="h3">조직</h3>
+        <ul>
+          <li>팀 소통이 어렵습니다</li>
+          <li>구성원이 주도적으로 움직이지 않습니다</li>
+          <li>리더십이 부담스럽습니다</li>
+          <li>조직 문화를 바꾸고 싶습니다</li>
+        </ul>
+      </div>
+      <div class="c-card fade">
+        <div class="c-card__num">03</div>
+        <h3 class="h3">관계</h3>
+        <ul>
+          <li>가족과 갈등이 반복됩니다</li>
+          <li>아이를 이해하기 어렵습니다</li>
+          <li>관계 패턴이 바뀌지 않습니다</li>
+          <li>나 자신과의 관계가 힘듭니다</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec sec--dark">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <h2 class="h2">왜 강점 퍼포먼스 코치 Star인가</h2>
+      <p class="sub">단순한 진단이 아니라 삶과 행동 변화까지 연결합니다.</p>
+    </div>
+    <div class="grid-3">
+      <div class="c-card fade">
+        <div class="c-card__num">01</div>
+        <h3 class="h3">강점 + 심리 통합</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;">강점을 발견하는 것에서 끝나지 않고 자기이해와 관계 패턴까지 연결합니다. 교류분석, 에니어그램, 인지행동 기반의 입체적 접근.</p>
+      </div>
+      <div class="c-card fade">
+        <div class="c-card__num">02</div>
+        <h3 class="h3">커리어 전환 경험</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;">직접 커리어 전환에 성공한 코치로서, 25년+ 조직 리더 경험을 바탕으로 현장에서 작동하는 변화를 설계합니다.</p>
+      </div>
+      <div class="c-card fade">
+        <div class="c-card__num">03</div>
+        <h3 class="h3">LSP × AI 활용 코칭</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;">LEGO® Serious Play 방식으로 생각을 구조화하고, AI 에이전트 전문가 자격을 바탕으로 AI 활용까지 실전 연결합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap s-about">
+    <div class="fade">
+      <div class="eyebrow">ABOUT COACH STAR</div>
+      <h2 class="h2">강점을 발견하는 순간<br>변화는 시작됩니다</h2>
+      <p class="sub" style="margin-bottom:20px;">강점코칭과 심리상담을 통합해 사람의 가능성을 성과와 성장으로 연결합니다.</p>
+      <p style="font-size:14px;color:var(--muted);line-height:1.85;">
+        개인의 강점을 발견하고 관계 패턴을 이해하며, 조직 안에서 건강한 소통과 리더십이 자리 잡도록 돕습니다. 특히 커리어 전환을 준비하는 분들의 정체성과 방향 설계에 집중합니다. 자격을 보유한 코치를 넘어, 실제 코칭 경험과 조직 현장 경험을 기반으로 행동 변화까지 연결합니다.
+      </p>
+      <div class="c-check-list">
+        <div class="c-check-item"><span class="c-check-icon">✓</span>Gallup CliftonStrengths Certified Coach</div>
+        <div class="c-check-item"><span class="c-check-icon">✓</span>KPC 한국코치협회 인증 코치</div>
+        <div class="c-check-item"><span class="c-check-icon">✓</span>LEGO® Serious Play® Certified Facilitator</div>
+        <div class="c-check-item"><span class="c-check-icon">✓</span>AI에이전트전문가 2급 (산업통상자원부 등록)</div>
+        <div class="c-check-item"><span class="c-check-icon">✓</span>심리상담 기반 성장 코칭 (교류분석·에니어그램·인지행동)</div>
+      </div>
+      <div class="s-about__ai">
+        <div class="s-about__ai-label">AI</div>
+        <div class="s-about__ai-text">
+          <strong>AI 활용 코칭 · NEW 2026</strong>
+          <p>강점을 알고 AI를 활용하면 성과의 속도와 방향이 달라집니다. AI 도구를 코칭·업무·일상에 실질적으로 연결하는 방법을 함께 설계합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade">
+      <div class="s-about__quote">
+        <blockquote>"혼자 고민하면 생각이지만,<br>함께 조립하면 전략이 된다."</blockquote>
+        <cite>— 강점 퍼포먼스 코치 Star</cite>
+        <div class="s-about__quote-bottom">정체성이 명확한 사람이 결국 고성과를 만들어 냅니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="sec sec--cream2">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <h2 class="h2">코칭 방식</h2>
+      <p class="sub">Discover → Understand → Visualize → Perform</p>
+    </div>
+    <div class="grid-4">
+      <div class="c-step fade">
+        <div class="c-step__num">1</div>
+        <h3 class="h3">Discover</h3>
+        <p>강점을 발견하고 현재의 반복 패턴을 확인합니다.</p>
+      </div>
+      <div class="c-step fade">
+        <div class="c-step__num">2</div>
+        <h3 class="h3">Understand</h3>
+        <p>자기이해와 관계 패턴을 구조적으로 해석합니다.</p>
+      </div>
+      <div class="c-step fade">
+        <div class="c-step__num">3</div>
+        <h3 class="h3">Visualize</h3>
+        <p>LSP 기반으로 말로 설명되지 않던 생각을 시각화합니다.</p>
+      </div>
+      <div class="c-step fade">
+        <div class="c-step__num">4</div>
+        <h3 class="h3">Perform</h3>
+        <p>강점을 실행 전략으로 바꾸고 성과로 연결합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="sec sec--white" id="program">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <h2 class="h2">프로그램</h2>
+      <p class="sub">개인 코칭부터 조직 워크숍까지 목적에 맞게 설계합니다.</p>
+    </div>
+    <div class="grid-2">
+      <div class="c-program fade">
+        <span class="c-tag">1:1 Coaching</span>
+        <h3 class="h3">1:1 강점 퍼포먼스 코칭</h3>
+        <p>커리어 전환자, 고성과자, 자기이해가 필요한 개인을 위한 코칭입니다. 강점 분석, 방향 설정, 실행 전략까지 연결합니다.</p>
+        <button onclick="openModal()" class="c-link" style="background:none;border:none;cursor:pointer;padding:0;">문의하기 →</button>
+      </div>
+      <div class="c-program fade">
+        <span class="c-tag">Organization</span>
+        <h3 class="h3">조직 강점 워크숍</h3>
+        <p>팀장, 리더, 조직 구성원을 대상으로 팀빌딩, 소통, 강점 문화 형성을 돕습니다.</p>
+        <button onclick="openModal()" class="c-link" style="background:none;border:none;cursor:pointer;padding:0;">워크숍 문의 →</button>
+      </div>
+      <div class="c-program fade">
+        <span class="c-tag">LSP Workshop</span>
+        <h3 class="h3">LEGO® Serious Play® 워크숍</h3>
+        <p>조직과 커뮤니티의 생각을 시각화하고 전략 정렬, 협업 구조화, 문제 해결을 지원합니다.</p>
+        <button onclick="openModal()" class="c-link" style="background:none;border:none;cursor:pointer;padding:0;">프로그램 문의 →</button>
+      </div>
+      <div class="c-program fade">
+        <span class="c-tag">AI × Strengths</span>
+        <h3 class="h3">AI 활용 강점 코칭·강의</h3>
+        <p>강점을 알고 AI를 활용하면 성과가 달라집니다. 개인 코칭 및 기업·기관 대상 AI 활용 강의를 운영합니다.</p>
+        <button onclick="openModal()" class="c-link" style="background:none;border:none;cursor:pointer;padding:0;">강의 문의 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <h2 class="h2">후기로 확인하는 변화</h2>
+      <p class="sub">강점 코칭과 워크숍 이후 반복적으로 확인되는 변화의 언어입니다.</p>
+    </div>
+    <div class="grid-4">
+      <div class="c-testi fade">
+        <p class="c-testi__quote">"막연하게 알고 있던 강점이 일과 관계에서 어떻게 쓰이는지 구체적으로 보이기 시작했습니다."</p>
+        <span class="c-testi__source">강점 코칭 참여자</span>
+      </div>
+      <div class="c-testi fade">
+        <p class="c-testi__quote">"결과지를 읽을 때는 단어처럼 느껴졌는데, 코칭을 통해 제 행동 패턴과 연결해 이해할 수 있었습니다."</p>
+        <span class="c-testi__source">1:1 코칭 참여자</span>
+      </div>
+      <div class="c-testi fade">
+        <p class="c-testi__quote">"커리어 방향을 바꿔야 할지 고민했는데, 먼저 나의 기준과 강점을 정리하는 시간이 되었습니다."</p>
+        <span class="c-testi__source">커리어 전환 코칭 참여자</span>
+      </div>
+      <div class="c-testi fade">
+        <p class="c-testi__quote">"서로 다른 팀원의 강점을 이해하면서 소통 방식과 협업의 기준을 다시 생각하게 되었습니다."</p>
+        <span class="c-testi__source">조직 워크숍 참여자</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="sec sec--dark" id="book">
+  <div class="wrap s-book">
+    <div class="s-book__img fade">
+      <img src="book-cover.png" alt="위대한 나의 발견"
+           onerror="this.parentElement.style.background='#1a1a1a';this.style.display='none'">
+    </div>
+    <div class="fade">
+      <div class="eyebrow">PUBLICATION</div>
+      <h2 class="h2" style="color:var(--white);">저서</h2>
+      <div class="s-book__meta">
+        <div class="s-book__row"><span class="s-book__key">제목</span><span class="s-book__val">위대한 나의 발견</span></div>
+        <div class="s-book__row"><span class="s-book__key">출판사</span><span class="s-book__val">바이북스 (ByBooks)</span></div>
+        <div class="s-book__row"><span class="s-book__key">저자</span><span class="s-book__val">8인의 갤럽 강점 코치 공저</span></div>
+        <div class="s-book__row"><span class="s-book__key">분류</span><span class="s-book__val">경제경영 · 자기계발</span></div>
+      </div>
+      <p class="s-book__desc">8명의 갤럽 강점 코치가 직접 경험한 강점 코칭의 실전 사례를 담은 공저입니다. 진정한 나를 발견하는 일의 가치, 강점이 만들어지는 과정, 강점 코칭의 성공 사례와 강점 활용을 통한 변화와 혁신을 나눕니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="sec sec--cream2" id="credentials">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <h2 class="h2">주요 자격 및 인증</h2>
+      <p class="sub">강점, 코칭, 심리, 조직 퍼실리테이션, AI 기반의 전문성을 갖추고 있습니다.</p>
+    </div>
+    <div class="grid-3">
+      <div class="c-cred c-cred--highlight fade"><div class="c-cred__title">Gallup CliftonStrengths Certified Coach</div><div class="c-cred__meta">Gallup Inc. · 2025.06</div></div>
+      <div class="c-cred c-cred--highlight fade"><div class="c-cred__title">KPC — Korea Professional Coach</div><div class="c-cred__meta">(사)한국코치협회 · 2025.08</div></div>
+      <div class="c-cred c-cred--highlight fade"><div class="c-cred__title">LEGO® Serious Play® Certified Facilitator</div><div class="c-cred__meta">SERIOUS WORK (SeriousWork Global)</div></div>
+      <div class="c-cred c-cred--highlight fade"><div class="c-cred__title">AI에이전트전문가 2급</div><div class="c-cred__meta">산업통상자원부 등록 · 케이미디어진흥원 · 2026.05</div></div>
+      <div class="c-cred fade"><div class="c-cred__title">교류분석 심리상담사 1급</div><div class="c-cred__meta">한국청소년육성협의회 · 2025.04</div></div>
+      <div class="c-cred fade"><div class="c-cred__title">에니어그램심리상담사 1급</div><div class="c-cred__meta">한국청소년육성협의회 · 2025.06</div></div>
+      <div class="c-cred fade"><div class="c-cred__title">레고조이 코칭전문가 / 레고크래프트 조직코칭전문가 2급</div><div class="c-cred__meta">(주)더마크월드 · 2026</div></div>
+      <div class="c-cred fade"><div class="c-cred__title">인지행동심리상담사 · 멘탈트레이너</div><div class="c-cred__meta">(주)휴넷 · 2022</div></div>
+      <div class="c-cred fade"><div class="c-cred__title">그림책 감성큐레이터 1급 · 도형심리상담사 2급</div><div class="c-cred__meta">그림책문화콘텐츠협회 / 한국청소년육성협의회 · 2025</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="s-cta" id="contact">
+  <div class="wrap fade">
+    <h2 class="h2">지금의 고민을<br>성장의 방향으로 바꾸고 싶다면</h2>
+    <p class="s-cta__text">
+      강점과 심리의 언어로 당신만의 성장 방향을 함께 설계합니다.<br>
+      개인 코칭, 조직 강의, 팀 워크숍 문의가 가능합니다.
+    </p>
+    <div class="btn-group btn-group--center">
+      <button onclick="openModal()" class="btn btn--yellow">문의 양식으로 보내기</button>
+      <a href="https://www.instagram.com/337star" target="_blank" rel="noopener" class="btn btn--outline-light">인스타그램 @337star</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="l-footer">
+  <div class="wrap l-footer__inner">
+    <span class="l-footer__logo">강점 퍼포먼스 코치 Star</span>
+    <span class="l-footer__links">
+      <a href="mailto:337smile@gmail.com">337smile@gmail.com</a> ·
+      <a href="https://www.instagram.com/337star" target="_blank">@337star</a>
+    </span>
+    <span class="l-footer__copy">© 2025 우근영. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+/* ---- Intersection observer ---- */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+/* ---- Modal ---- */
+const overlay = document.getElementById('contactModal');
+
+function openModal() {
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// 오버레이 배경 클릭 시 닫기
+overlay.addEventListener('click', function(e) {
+  if (e.target === overlay) closeModal();
+});
+// ESC 키 닫기
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* ---- Formspree 제출 처리 ---- */
+async function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('m-submit-btn');
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('m-success');
+
+  btn.disabled = true;
+  btn.textContent = '전송 중...';
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+      // 3초 후 모달 닫기
+      setTimeout(() => {
+        closeModal();
+        // 폼 리셋 (다음 열기를 위해)
+        setTimeout(() => {
+          form.reset();
+          form.style.display = 'block';
+          success.style.display = 'none';
+          btn.disabled = false;
+          btn.textContent = '문의 보내기 →';
+        }, 400);
+      }, 3000);
+    } else {
+      throw new Error('서버 오류');
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = '다시 시도해주세요';
+    btn.style.background = 'var(--red)';
+    setTimeout(() => {
+      btn.textContent = '문의 보내기 →';
+      btn.style.background = '';
+    }, 2500);
+  }
+}
+</script>
+</body>
+</html>
